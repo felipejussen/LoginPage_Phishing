@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comunicado TI Interna</title>
+        
+    </head>
+
+    <body style="font-family: Arial, sans-serif;margin: 0; padding: 0;background-color: #f2f2f2;">
+
+        <div class="container" style="width: 700px; margin: 0 auto; background-color: #ffffff; border: 1px solid #cccccc;">
+            <div class="header" style="background-color: #0066cc; color: #ffffff; padding: 20px; text-align: left;">
+                <h1 style="margin: 0;font-size: 24px;">COMUNICADO</h1>
+                <div>
+                    
+                </div>
+                <h2 style="margin: 5px 0 0 0;font-size: 18px;font-weight: normal;">TI Interna</h2>
+            </div>
+
+            <div class="content" style="width: 600px; margin: 0 auto; padding: 20px; padding: 20px; font-size: 16px; color: #333333; text-align: center;">
+
+                <img style="width: 100px;display: block; margin: 0 auto;" class="logo" role="img" src="https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_ea19b2112f4dfd8e90b4505ef7dcb4f9.png" alt="Microsoft">
+
+                <p style="margin-bottom: 20px;line-height: 1.6;">Olá, {{.FirstName}},</p>
+                <p style="margin-bottom: 20px;line-height: 1.6;">
+                    Você deve ter ouvido por aí a respeito do recente incidente, relacionado ao sensor de segurança
+                    CrowdStrike Falcon.
+                </p>
+                <p style="margin-bottom: 20px;line-height: 1.6;">
+                    Devido um problema na atualização (update) de software sensores, que servem para detectar possíveis
+                    invasões de hackers, ocasionaram na interrupção de serviços Microsoft e vazamentos de dados.
+                </p>
+                <p style="margin-bottom: 20px;line-height: 1.6;">
+                    Em resposta, nós da CLIENTE realizamos atualizações e implementações de segurança em nossa
+                    infraestrutura!
+                </p>
+                <p style="margin-bottom: 20px;line-height: 1.6;">
+                    Contudo, apenas você pode proteger suas credenciais dos vazamentos, por isso pedimos que atualize sua
+                    senha!
+                </p>
+                <a href="{{.URL}}" class="button" style="display: block;width: 200px;margin: 0 auto;padding: 10px;text-align: center;background-color: #00a2e8;color: #ffffff;text-decoration: none;border-radius: 5px;font-weight: bold;">ATUALIZAR SENHA</a>
+            </div>
+
+            <div class="footer" style="background-color: #0066cc;color: #ffffff;text-align: center;padding: 10px;font-size: 14px;">
+                <img src="" alt="Logo cliente">
+            </div>
+        </div>
+
+    </body>
+
+</html>
